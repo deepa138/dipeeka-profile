@@ -31,7 +31,7 @@ function Index() {
               Hi, I'm <span className="text-gradient">{profile.name}</span>
             </h1>
             <div className="mt-4 text-xl md:text-2xl font-semibold text-foreground min-h-[2em]">
-              I'm a <Typewriter words={["WordPress Developer", "Frontend Developer", "Team Leader", "Plugin Developer"]} />
+              I'm a <Typewriter words={["WordPress Developer", "Frontend Developer", "Web Designer", "WooCommerce Expert", "Performance Engineer"]} />
             </div>
             <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-xl">
               {profile.tagline}
@@ -79,9 +79,9 @@ function Index() {
       <Section
         eyebrow="Featured Work"
         title="Selected Projects"
-        description="A glimpse of plugins, themes and storefronts I've shipped."
+        description="A glimpse of WordPress, WooCommerce, Shopify and React builds I've shipped for clients worldwide."
       >
-        <ProjectsGrid />
+        <ProjectsGrid limit={6} />
         <div className="mt-10 text-center">
           <Link to="/portfolio" className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all">
             See all projects <ArrowRight className="size-4" />

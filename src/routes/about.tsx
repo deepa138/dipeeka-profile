@@ -38,6 +38,17 @@ function About() {
         <div className="space-y-6 animate-fade-up" style={{ animationDelay: "100ms" }}>
           <p className="text-lg text-muted-foreground leading-relaxed">{profile.bio}</p>
 
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-3">What I focus on</p>
+            <div className="flex flex-wrap gap-2">
+              {profile.focus.map((f) => (
+                <span key={f} className="text-xs px-3 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/30 font-medium">
+                  {f}
+                </span>
+              ))}
+            </div>
+          </div>
+
           <div className="grid sm:grid-cols-2 gap-4">
             <InfoCard icon={<GraduationCap className="size-4" />} label="Education" value={profile.education} />
             <InfoCard icon={<Languages className="size-4" />} label="Languages" value={profile.languages.join(", ")} />
