@@ -1,7 +1,8 @@
 export const profile = {
   name: "Dipeeka Paste",
-  title: "Frontend Developer | WordPress Specialist | Team Leader",
-  tagline: "Building fast, beautiful, and SEO-optimized web experiences.",
+  title: "WordPress Developer | Frontend Developer | Web Designer",
+  tagline:
+    "Experienced Web Developer with expertise in WordPress development, custom theme customization, plugin development, frontend development, eCommerce solutions, and website optimization. Passionate about building high-performance, user-friendly websites and delivering quality solutions for clients worldwide.",
   email: "pastdeepika56@gmail.com",
   phone: "+91 8600762043",
   location: "Kolhapur, Maharashtra, India",
@@ -10,27 +11,43 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/dipeeka-paste-151638227/",
     github: "https://github.com/deepa138",
   },
-  bio: "I'm a passionate Frontend Developer with 4+ years of experience building dynamic, user-friendly, and SEO-optimized websites. I specialize in WordPress, WooCommerce, and responsive UI development. Currently leading a team of developers at Walstar Technology, delivering scalable web solutions.",
+  bio: "I'm a passionate Web Developer specializing in WordPress, custom theme & plugin development, WooCommerce, Elementor, React, and modern frontend stacks. With hands-on experience delivering 50+ websites for clients across the US, Europe, and Asia, I focus on building fast, accessible, SEO-optimized sites that solve real business problems. I take pride in clean code, performance budgets (95+ PageSpeed), and crisp client communication.",
   education: "BE Computer Engineering, Shivaji University Kolhapur (2022)",
   languages: ["English", "Marathi", "Hindi"],
+  focus: [
+    "WordPress Development",
+    "Custom Theme & Plugin Development",
+    "eCommerce (WooCommerce, Shopify)",
+    "Performance Optimization & Core Web Vitals",
+    "Frontend Development (React, JS, Sass)",
+    "Client Communication & Problem Solving",
+  ],
 };
 
 export const skills = [
   {
-    category: "Frontend",
-    items: ["HTML & CSS", "Bootstrap", "JavaScript", "jQuery", "Responsive Web Design", "Cross-Browser Compatibility", "Landing Page Design"],
+    category: "Frontend Development",
+    items: ["HTML5", "CSS3", "Sass", "Less", "Bootstrap 4", "JavaScript", "jQuery", "PSD to HTML"],
   },
   {
-    category: "CMS & Platforms",
-    items: ["WordPress", "WooCommerce", "Webflow", "Wix", "Squarespace", "Theme Customization", "Plugin Development"],
+    category: "CMS & Website Builders",
+    items: ["WordPress", "Elementor", "Webflow", "Wix", "Squarespace", "ClickFunnels"],
   },
   {
-    category: "Integrations & Tools",
-    items: ["GitHub / Git", "Shopify", "Mailchimp", "Constant Contact", "Figma", "Adobe XD", "Photoshop", "App Integrations", "GitHub API"],
+    category: "eCommerce",
+    items: ["WooCommerce", "Shopify", "BigCommerce"],
   },
   {
-    category: "Other",
-    items: ["SEO Optimization", "Performance Optimization", "Team Leadership", "Client Communication"],
+    category: "Development",
+    items: ["PHP", "WordPress Theme Customization", "Plugin Development", "Website Maintenance", "React"],
+  },
+  {
+    category: "Design Tools",
+    items: ["Figma", "Adobe XD", "Photoshop"],
+  },
+  {
+    category: "Performance & SEO",
+    items: ["Technical SEO", "Site Optimization", "Core Web Vitals", "Google PageSpeed Optimization"],
   },
 ];
 
@@ -40,19 +57,19 @@ export const experience = [
     company: "Walstar Technology",
     period: "Nov 2024 – Present",
     highlights: [
-      "Promoted to Team Leader within 2 years of joining",
-      "Leading a team of 5+ developers across multiple client projects",
-      "Defining frontend architecture and code review standards",
+      "Leading a team of 5+ developers across WordPress, WooCommerce, Shopify, and React projects",
+      "Defining frontend architecture, code review standards, and performance budgets",
+      "Owning client communication, scoping, and delivery for international clients",
     ],
   },
   {
-    role: "Senior Frontend Developer",
+    role: "Senior WordPress & Frontend Developer",
     company: "Walstar Technology",
     period: "Apr 2023 – Nov 2024",
     highlights: [
-      "Reduced website load times by 40% via performance optimization",
-      "Built custom WordPress themes and WooCommerce stores",
-      "Mentored junior developers on responsive design best practices",
+      "Built and customized WordPress themes, Elementor sites, and WooCommerce storefronts",
+      "Improved Google PageSpeed scores to 95+ and optimized Core Web Vitals across multiple sites",
+      "Developed custom plugins, including the Walstar AI Image Alt Generator (wordpress.org)",
     ],
   },
   {
@@ -60,43 +77,210 @@ export const experience = [
     company: "Walstar Technology",
     period: "Aug 2022 – Apr 2023",
     highlights: [
-      "Delivered 20+ responsive landing pages with cross-browser support",
-      "Integrated third-party APIs and email marketing tools",
+      "Delivered 20+ responsive landing pages and PSD-to-HTML conversions",
+      "Integrated third-party APIs, Mailchimp, and payment gateways",
+      "Worked across WordPress, Webflow, Wix, Squarespace, and ClickFunnels",
     ],
   },
 ];
 
-export const projects = [
+export type Project = {
+  title: string;
+  url: string;
+  category: string;
+  description: string;
+  tech: string[];
+  featured?: boolean;
+};
+
+const host = (u: string) => {
+  try {
+    return new URL(u).hostname.replace(/^www\./, "");
+  } catch {
+    return u;
+  }
+};
+
+export const shot = (url: string, w = 1000) =>
+  `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=${w}`;
+
+export const projects: Project[] = [
+  // WordPress / Elementor
   {
-    title: "Walstar AI Image Alt Generator",
-    description: "A WordPress plugin that auto-generates AI-powered image alt text to improve accessibility and SEO.",
-    link: "https://wordpress.org/plugins/walstar-ai-image-alt-generator/",
-    tags: ["WordPress", "Plugin Development", "AI", "SEO"],
+    title: "Het Groeneveld",
+    url: "https://hetgroeneveld.nl/",
+    category: "WordPress / Elementor",
+    description: "Marketing website built on WordPress with Elementor — clean Dutch hospitality brand experience.",
+    tech: ["WordPress", "Elementor", "PHP", "CSS3"],
     featured: true,
   },
   {
-    title: "WooCommerce Store",
-    description: "Custom WooCommerce storefront with optimized checkout flow and payment gateway integrations.",
-    link: "#",
-    tags: ["WooCommerce", "WordPress", "E-commerce"],
+    title: "Studio Samenwerkt",
+    url: "https://studiosamenwerkt.nl/",
+    category: "WordPress / Elementor",
+    description: "Custom Elementor-built studio site with bespoke sections and responsive layouts.",
+    tech: ["WordPress", "Elementor", "Sass"],
   },
   {
-    title: "Landing Page Design",
-    description: "High-converting marketing landing pages with responsive layouts and motion-driven UI.",
-    link: "#",
-    tags: ["HTML", "CSS", "JavaScript"],
+    title: "Xchange Auto",
+    url: "https://xchangeauto.com/",
+    category: "WordPress / Elementor",
+    description: "Automotive marketplace site with performance-tuned WordPress build and 95+ PageSpeed.",
+    tech: ["WordPress", "Elementor", "PageSpeed"],
+    featured: true,
   },
   {
-    title: "Custom WordPress Theme",
-    description: "Bespoke WordPress theme built from scratch with Gutenberg blocks and ACF integrations.",
-    link: "#",
-    tags: ["WordPress", "PHP", "Theme Dev"],
+    title: "Dream Home Roofers",
+    url: "https://go.dreamhomeroofers.com/",
+    category: "WordPress / Elementor",
+    description: "High-converting roofing lead-gen site with optimized landing flow.",
+    tech: ["WordPress", "Elementor", "CRO"],
+  },
+  {
+    title: "American Forever Security",
+    url: "https://americanforeversecurity.com/",
+    category: "WordPress / Elementor",
+    description: "Security services WordPress site with custom Elementor templates and SEO setup.",
+    tech: ["WordPress", "Elementor", "SEO"],
+  },
+  {
+    title: "Founders Waterproofing",
+    url: "https://founderswaterproofing.com/",
+    category: "WordPress / Elementor",
+    description: "Service-business WordPress build focused on local SEO and lead capture.",
+    tech: ["WordPress", "Elementor", "Local SEO"],
+  },
+  {
+    title: "Progressive Smog",
+    url: "https://progressivesmog.com/",
+    category: "WordPress / Elementor",
+    description: "Auto smog-check business site with online booking integrations.",
+    tech: ["WordPress", "Elementor"],
+  },
+  {
+    title: "EngineTest.ai",
+    url: "https://enginetest.ai/",
+    category: "WordPress / Elementor",
+    description: "AI product marketing site with custom Elementor sections and animations.",
+    tech: ["WordPress", "Elementor", "JavaScript"],
+  },
+
+  // WooCommerce
+  {
+    title: "Monarch Flowers",
+    url: "https://monarchflowers.nl/",
+    category: "WooCommerce",
+    description: "Floral eCommerce storefront with WooCommerce, custom product flows, and Dutch payment gateways.",
+    tech: ["WordPress", "WooCommerce", "PHP"],
+    featured: true,
+  },
+  {
+    title: "Gestures",
+    url: "https://gestures.co.nz/",
+    category: "WooCommerce",
+    description: "WooCommerce gift store with custom catalog filtering and checkout optimization.",
+    tech: ["WordPress", "WooCommerce", "jQuery"],
+  },
+
+  // Custom WooCommerce
+  {
+    title: "Climatec",
+    url: "https://climatec.com.lb/",
+    category: "Custom WooCommerce",
+    description: "Custom-built WooCommerce platform with bespoke product configurators and B2B flows.",
+    tech: ["WordPress", "WooCommerce", "PHP", "Custom Plugin"],
+    featured: true,
+  },
+
+  // React
+  {
+    title: "Gorge Cleaners",
+    url: "https://www.gorgecleaners.com/",
+    category: "React",
+    description: "React-based marketing site with smooth animations and serverless booking flow.",
+    tech: ["React", "JavaScript", "CSS3"],
+  },
+  {
+    title: "On The Go GC",
+    url: "https://www.onthegogc.com/",
+    category: "React",
+    description: "Modern React single-page site for a mobile service business.",
+    tech: ["React", "JavaScript", "Responsive"],
+  },
+
+  // Squarespace
+  {
+    title: "K-M Interiors",
+    url: "https://www.k-m-interiors.com/",
+    category: "Squarespace",
+    description: "Squarespace interior-design portfolio with custom CSS and editorial layout.",
+    tech: ["Squarespace", "CSS3"],
+  },
+
+  // Shopify
+  {
+    title: "Avojoy",
+    url: "https://avojoy.org/",
+    category: "Shopify",
+    description: "Shopify storefront with custom Liquid theme tweaks and conversion-focused PDP.",
+    tech: ["Shopify", "Liquid", "CSS3"],
+  },
+
+  // Landing pages
+  {
+    title: "L'Authentic France — Lagrasse Wine Tour",
+    url: "https://www.lauthenticfrance.com/lagrasse-wine-tasting-tour/",
+    category: "Landing Page",
+    description: "Conversion-focused tour landing page with high-impact visuals and booking CTA.",
+    tech: ["WordPress", "Elementor", "CRO"],
+  },
+  {
+    title: "L'Authentic France — Dalí Museum",
+    url: "https://www.lauthenticfrance.com/lp-dali-museum/",
+    category: "Landing Page",
+    description: "Editorial landing page for a Dalí museum experience with rich media storytelling.",
+    tech: ["WordPress", "Elementor"],
   },
 ];
+
+export const performanceWins = [
+  {
+    url: "https://xchangeauto.com/",
+    title: "Xchange Auto",
+    score: 96,
+    summary: "Lifted PageSpeed to 96 and CLS to <0.05 via image pipeline, font subsetting, and critical CSS.",
+  },
+  {
+    url: "https://exportusautos.com/",
+    title: "Export US Autos",
+    score: 97,
+    summary: "Audit + optimization pass — 97 mobile PageSpeed and green Core Web Vitals.",
+  },
+  {
+    url: "https://nationalfleetadvisor.com/",
+    title: "National Fleet Advisor",
+    score: 95,
+    summary: "Reduced LCP by 58% with deferred third-party scripts and lazy-loaded hero media.",
+  },
+  {
+    url: "https://reggiebuyscars.com/",
+    title: "Reggie Buys Cars",
+    score: 98,
+    summary: "WordPress hardening + WebP + caching — 98 desktop, 95 mobile PageSpeed.",
+  },
+  {
+    url: "https://simplyalwaysawake.com/",
+    title: "Simply Always Awake",
+    score: 95,
+    summary: "Theme refactor and render-blocking elimination — 95+ PageSpeed across templates.",
+  },
+];
+
+export { host };
 
 export const stats = [
   { value: 4, suffix: "+", label: "Years Experience" },
   { value: 50, suffix: "+", label: "Projects Delivered" },
+  { value: 95, suffix: "+", label: "Avg PageSpeed Score" },
   { value: 5, suffix: "+", label: "Team Members Led" },
-  { value: 40, suffix: "%", label: "Avg Load Time Reduction" },
 ];
