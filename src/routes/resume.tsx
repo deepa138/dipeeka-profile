@@ -3,25 +3,25 @@ import { Download, GraduationCap } from "lucide-react";
 import { Section } from "@/components/Section";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { profile } from "@/data/portfolio";
+import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export const Route = createFileRoute("/resume")({
-  head: () => ({
-    meta: [
-      { title: "Resume — Dipeeka Paste" },
-      { name: "description", content: "Career timeline and education for Dipeeka Paste — Frontend Developer & WordPress Specialist." },
-      { property: "og:title", content: "Resume — Dipeeka Paste" },
-      { property: "og:description", content: "Career timeline and education." },
-    ],
-  }),
   component: ResumePage,
 });
 
 function ResumePage() {
+  useDocumentMeta({
+    title: "Resume — Dipeeka Paste",
+    description:
+      "Career timeline and education for Dipeeka Paste — Frontend Developer & WordPress Specialist.",
+    ogTitle: "Resume — Dipeeka Paste",
+    ogDescription: "Career timeline and education.",
+  });
   return (
     <Section eyebrow="Resume" title="Experience & Education">
       <div className="flex justify-end mb-8 -mt-4">
         <a
-          href="/resume.pdf"
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
           download
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 shadow-glow transition-all"
         >
