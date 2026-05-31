@@ -3,20 +3,21 @@ import { Mail, Phone, MapPin, Linkedin, Globe, Github, GraduationCap, Languages 
 import { Section } from "@/components/Section";
 import { profile } from "@/data/portfolio";
 import avatar from "@/assets/dipeeka-avatar.jpg";
+import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Dipeeka Paste" },
-      { name: "description", content: "Frontend Developer & WordPress Specialist with 4+ years of experience, currently leading a team at Walstar Technology." },
-      { property: "og:title", content: "About — Dipeeka Paste" },
-      { property: "og:description", content: "Get to know Dipeeka — her journey, experience, and skills as a Frontend Developer & WordPress Specialist." },
-    ],
-  }),
   component: About,
 });
 
 function About() {
+  useDocumentMeta({
+    title: "About — Dipeeka Paste",
+    description:
+      "Frontend Developer & WordPress Specialist with 4+ years of experience, currently leading a team at Walstar Technology.",
+    ogTitle: "About — Dipeeka Paste",
+    ogDescription:
+      "Get to know Dipeeka — her journey, experience, and skills as a Frontend Developer & WordPress Specialist.",
+  });
   return (
     <Section eyebrow="About me" title="A passionate developer & team leader from Kolhapur">
       <div className="grid md:grid-cols-[280px_1fr] gap-10 items-start">

@@ -6,18 +6,18 @@ import { Stats } from "@/components/Stats";
 import { Section } from "@/components/Section";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
 import { profile } from "@/data/portfolio";
+import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Dipeeka Paste — Frontend Developer & WordPress Specialist" },
-      { name: "description", content: "Frontend Developer & WordPress Specialist building fast, beautiful, SEO-optimized web experiences from Kolhapur, India." },
-    ],
-  }),
   component: Index,
 });
 
 function Index() {
+  useDocumentMeta({
+    title: "Dipeeka Paste — Frontend Developer & WordPress Specialist",
+    description:
+      "Frontend Developer & WordPress Specialist building fast, beautiful, SEO-optimized web experiences from Kolhapur, India.",
+  });
   return (
     <>
       <section className="relative overflow-hidden bg-hero-glow">
@@ -44,7 +44,7 @@ function Index() {
                 View My Work <ArrowRight className="size-4" />
               </Link>
               <a
-                href="/resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 download
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-border bg-card text-sm font-semibold hover:border-primary hover:text-primary transition-colors"
               >

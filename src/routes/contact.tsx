@@ -4,16 +4,9 @@ import { z } from "zod";
 import { Mail, Phone, MapPin, Send, Linkedin, Globe, Github, CheckCircle2 } from "lucide-react";
 import { Section } from "@/components/Section";
 import { profile } from "@/data/portfolio";
+import { useDocumentMeta } from "@/hooks/useDocumentMeta";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Dipeeka Paste" },
-      { name: "description", content: "Get in touch with Dipeeka Paste for Frontend, WordPress, or WooCommerce projects." },
-      { property: "og:title", content: "Contact — Dipeeka Paste" },
-      { property: "og:description", content: "Let's build something great together." },
-    ],
-  }),
   component: ContactPage,
 });
 
@@ -24,6 +17,12 @@ const schema = z.object({
 });
 
 function ContactPage() {
+  useDocumentMeta({
+    title: "Contact — Dipeeka Paste",
+    description: "Get in touch with Dipeeka Paste for Frontend, WordPress, or WooCommerce projects.",
+    ogTitle: "Contact — Dipeeka Paste",
+    ogDescription: "Let's build something great together.",
+  });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
 
