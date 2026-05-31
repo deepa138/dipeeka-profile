@@ -27,7 +27,9 @@ export function Footer() {
             <Globe className="size-4" />
           </a>
           <a
-            href="#"
+            href="https://github.com/deepa138"
+            target="_blank"
+            rel="noreferrer"
             aria-label="GitHub"
             className="p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
           >
