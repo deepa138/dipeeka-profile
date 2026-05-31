@@ -1,6 +1,5 @@
-import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet, Link, createRootRouteWithContext, useRouter } from "@tanstack/react-router";
-import { useMemo } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -64,10 +63,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  // queryClient is already created in router; just provide it
-  const client = useMemo(() => queryClient, [queryClient]);
   return (
-    <QueryClientProvider client={client}>
+    <QueryClientProvider client={queryClient}>
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
