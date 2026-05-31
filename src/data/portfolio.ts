@@ -8,7 +8,7 @@ export const profile = {
   links: {
     wordpress: "https://profiles.wordpress.org/dipeeka138/",
     linkedin: "https://www.linkedin.com/in/dipeeka-paste-151638227/",
-    github: "#",
+    github: "https://github.com/deepa138",
   },
   bio: "I'm a passionate Frontend Developer with 4+ years of experience building dynamic, user-friendly, and SEO-optimized websites. I specialize in WordPress, WooCommerce, and responsive UI development. Currently leading a team of developers at Walstar Technology, delivering scalable web solutions.",
   education: "BE Computer Engineering, Shivaji University Kolhapur (2022)",

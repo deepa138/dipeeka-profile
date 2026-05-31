@@ -32,9 +32,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-lg bg-background/70 border-b border-border">
       <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="font-display font-bold text-lg">
-          <span className="text-gradient">Dipeeka</span>
-          <span className="text-foreground">.</span>
+        <Link to="/" aria-label="Dipeeka Paste — Home" className="flex items-center gap-2 group">
+          <span className="relative inline-flex items-center justify-center size-9 rounded-lg bg-gradient-to-br from-primary to-primary-glow shadow-glow transition-transform group-hover:scale-105">
+            <span className="font-display font-extrabold text-[13px] tracking-tight text-primary-foreground leading-none">DP</span>
+          </span>
+          <span className="font-display font-bold text-base hidden sm:inline">
+            <span className="text-gradient">Dipeeka</span>
+            <span className="text-foreground">.</span>
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">
