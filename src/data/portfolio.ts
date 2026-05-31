@@ -57,9 +57,13 @@ export const experience = [
     company: "Walstar Technology",
     period: "Nov 2024 – Present",
     highlights: [
-      "Leading a team of 5+ developers across WordPress, WooCommerce, Shopify, and React projects",
-      "Defining frontend architecture, code review standards, and performance budgets",
-      "Owning client communication, scoping, and delivery for international clients",
+      "Promoted from Junior Developer to Team Leader within 2 years based on performance and leadership.",
+      "Lead and mentor a team of 5+ frontend developers — task delegation, code reviews, and enforcing best practices.",
+      "Architect and deliver WordPress, WooCommerce, Webflow, Shopify, and Squarespace solutions for international clients.",
+      "Achieved 95+ PageSpeed scores on multiple production sites through performance auditing and Core Web Vitals optimisation.",
+      "Oversaw client communications from requirement gathering to delivery; conducted training on Git workflow, frontend frameworks, and CMS tools.",
+      "Managed project timelines, prepared reports, and ensured on-time delivery within budget.",
+      "Developed custom plugins, including the Walstar AI Image Alt Generator (wordpress.org)"
     ],
   },
   {
@@ -67,9 +71,12 @@ export const experience = [
     company: "Walstar Technology",
     period: "Apr 2023 – Nov 2024",
     highlights: [
-      "Built and customized WordPress themes, Elementor sites, and WooCommerce storefronts",
-      "Improved Google PageSpeed scores to 95+ and optimized Core Web Vitals across multiple sites",
-      "Developed custom plugins, including the Walstar AI Image Alt Generator (wordpress.org)",
+      "Delivered 20+ client projects including Elementor-based sites, custom WooCommerce stores, landing pages, React websites, and Squarespace builds.",
+      "Developed custom WooCommerce solutions (monarchflowers.nl, gestures.co.nz, climatec.com.lb) with advanced product management, dynamic collections, and checkout customisation.",
+      "Built high-converting landing pages and sales funnels (ClickFunnels, HTML/CSS) for US and European clients.",
+      "Integrated third-party services: Mailchimp, Constant Contact, booking tools, and performance tracking.",
+      "Worked with Webflow and Wix to design and deploy CMS-driven marketing sites.",
+      "Collaborated across design (Figma, XD, Photoshop) and development lifecycles: analysis, build, testing, and deployment.",
     ],
   },
   {
@@ -78,8 +85,10 @@ export const experience = [
     period: "Aug 2022 – Apr 2023",
     highlights: [
       "Delivered 20+ responsive landing pages and PSD-to-HTML conversions",
-      "Integrated third-party APIs, Mailchimp, and payment gateways",
-      "Worked across WordPress, Webflow, Wix, Squarespace, and ClickFunnels",
+      "Built responsive websites using WordPress, Bootstrap, HTML, CSS, and JavaScript from Figma/XD/PSD mockups.",
+      "Contributed to WordPress theme and plugin development, landing pages, and sales funnel projects.",
+      "Ensured cross-browser compatibility, performance optimisation, and seamless user experience across all deliverables.",
+      "Collaborated with designers, backend developers, and clients to translate requirements into scalable solutions.",
     ],
   },
 ];
