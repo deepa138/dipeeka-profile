@@ -114,6 +114,30 @@ export const shot = (url: string, w = 1000) =>
   `https://s.wordpress.com/mshots/v1/${encodeURIComponent(url)}?w=${w}`;
 
 export const projects: Project[] = [
+  // WordPress / Elementor
+  {
+    title: "My Restaurant",
+    url: "https://my-restaurant.rf.gd/",
+    category: "WordPress / Elementor",
+    description: "Full-featured restaurant website with menu showcase, operating hours, reservation flow, and brand storytelling built on WordPress.",
+    tech: ["WordPress", "Elementor", "PHP", "CSS3"],
+    featured: true,
+  },
+  {
+    title: "Mortgage Loans",
+    url: "https://mortgage-loans.byethost22.com/wp/",
+    category: "WordPress / Elementor",
+    description: "Mortgage lending portal with home-buying and refinancing programs, rate calculators, and streamlined application workflows.",
+    tech: ["WordPress", "Elementor", "PHP", "JavaScript"],
+  },
+  {
+    title: "Play Sprout Academy",
+    url: "https://playsproutacadem.byethost31.com/wp/",
+    category: "WordPress / Elementor",
+    description: "Childcare and early-learning academy site with playful design, program details, and parent registration flow.",
+    tech: ["WordPress", "Elementor", "PHP", "Responsive Design"],
+    featured: true,
+  },
 
   // WooCommerce
   {
