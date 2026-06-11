@@ -11,7 +11,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/dipeeka-paste-151638227/",
     github: "https://github.com/deepa138",
   },
-  bio: "I'm a passionate Web Developer specializing in WordPress, custom theme & plugin development, WooCommerce, Elementor, React, and modern frontend stacks. With hands-on experience delivering 50+ websites for clients across the US, Europe, and Asia, I focus on building fast, accessible, SEO-optimized sites that solve real business problems. I take pride in clean code, performance budgets (95+ PageSpeed), and crisp client communication.",
+  bio: "I'm a passionate Web Developer specializing in WordPress, custom theme & plugin development, WooCommerce, Elementor, React, and modern frontend stacks. With hands-on experience delivering 60+ websites for clients across the US, Europe, and Asia, I focus on building fast, accessible, SEO-optimized sites that solve real business problems. I take pride in clean code, performance budgets (95+ PageSpeed), and crisp client communication.",
   education: "BE Computer Engineering, Shivaji University Kolhapur (2022)",
   languages: ["English", "Marathi", "Hindi"],
   focus: [
@@ -116,62 +116,27 @@ export const shot = (url: string, w = 1000) =>
 export const projects: Project[] = [
   // WordPress / Elementor
   {
-    title: "Het Groeneveld",
-    url: "https://hetgroeneveld.nl/",
+    title: "My Restaurant",
+    url: "https://my-restaurant.rf.gd/",
     category: "WordPress / Elementor",
-    description: "Marketing website built on WordPress with Elementor — clean Dutch hospitality brand experience.",
+    description: "Full-featured restaurant website with menu showcase, operating hours, reservation flow, and brand storytelling built on WordPress.",
     tech: ["WordPress", "Elementor", "PHP", "CSS3"],
     featured: true,
   },
   {
-    title: "Studio Samenwerkt",
-    url: "https://studiosamenwerkt.nl/",
+    title: "Mortgage Loans",
+    url: "https://mortgage-loans.byethost22.com/wp/",
     category: "WordPress / Elementor",
-    description: "Custom Elementor-built studio site with bespoke sections and responsive layouts.",
-    tech: ["WordPress", "Elementor", "Sass"],
+    description: "Mortgage lending portal with home-buying and refinancing programs, rate calculators, and streamlined application workflows.",
+    tech: ["WordPress", "Elementor", "PHP", "JavaScript"],
   },
   {
-    title: "Xchange Auto",
-    url: "https://xchangeauto.com/",
+    title: "Play Sprout Academy",
+    url: "https://playsproutacadem.byethost31.com/wp/",
     category: "WordPress / Elementor",
-    description: "Automotive marketplace site with performance-tuned WordPress build and 95+ PageSpeed.",
-    tech: ["WordPress", "Elementor", "PageSpeed"],
+    description: "Childcare and early-learning academy site with playful design, program details, and parent registration flow.",
+    tech: ["WordPress", "Elementor", "PHP", "Responsive Design"],
     featured: true,
-  },
-  {
-    title: "Dream Home Roofers",
-    url: "https://go.dreamhomeroofers.com/",
-    category: "WordPress / Elementor",
-    description: "High-converting roofing lead-gen site with optimized landing flow.",
-    tech: ["WordPress", "Elementor", "CRO"],
-  },
-  {
-    title: "American Forever Security",
-    url: "https://americanforeversecurity.com/",
-    category: "WordPress / Elementor",
-    description: "Security services WordPress site with custom Elementor templates and SEO setup.",
-    tech: ["WordPress", "Elementor", "SEO"],
-  },
-  {
-    title: "Founders Waterproofing",
-    url: "https://founderswaterproofing.com/",
-    category: "WordPress / Elementor",
-    description: "Service-business WordPress build focused on local SEO and lead capture.",
-    tech: ["WordPress", "Elementor", "Local SEO"],
-  },
-  {
-    title: "Progressive Smog",
-    url: "https://progressivesmog.com/",
-    category: "WordPress / Elementor",
-    description: "Auto smog-check business site with online booking integrations.",
-    tech: ["WordPress", "Elementor"],
-  },
-  {
-    title: "EngineTest.ai",
-    url: "https://enginetest.ai/",
-    category: "WordPress / Elementor",
-    description: "AI product marketing site with custom Elementor sections and animations.",
-    tech: ["WordPress", "Elementor", "JavaScript"],
   },
 
   // WooCommerce
@@ -289,7 +254,7 @@ export { host };
 
 export const stats = [
   { value: 4, suffix: "+", label: "Years Experience" },
-  { value: 50, suffix: "+", label: "Projects Delivered" },
+  { value: 60, suffix: "+", label: "Projects Delivered" },
   { value: 95, suffix: "+", label: "Avg PageSpeed Score" },
   { value: 5, suffix: "+", label: "Team Members Led" },
 ];
